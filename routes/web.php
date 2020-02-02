@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//route CRUD
+Route::get('/','PegawaiController@index');

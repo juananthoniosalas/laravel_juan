@@ -24,9 +24,29 @@
           <section class="container tm-page-1-content">
             <div class="row">
               <div class="col-md-6 ml-auto tm-text-white">
-                <header><h1>Individuality </h1></header>
-                <p>“Be who you are and say what you feel, because those who mind don't matter, and those who matter don't mind.”
-― Bernard M. Baruch</p>
+                <header><h1>Daftar Tabel </h1></header>
+                <table border="1">
+  		<tr>
+  			<th>Nama</th>
+  			<th>Jabatan</th>
+  			<th>Umur</th>
+  			<th>Alamat</th>
+  			<th>Opsi</th>
+  		</tr>
+  		@foreach($pegawai as $p)
+  		<tr>
+  			<td>{{ $p->pegawai_nama }}</td>
+  			<td>{{ $p->pegawai_jabatan }}</td>
+  			<td>{{ $p->pegawai_umur }}</td>
+  			<td>{{ $p->pegawai_alamat }}</td>
+  			<td>
+  				<a href="/pegawai/edit/{{ $p->pegawai_id }}">Edit</a>
+  				|
+  				<a href="/pegawai/hapus/{{ $p->pegawai_id }}">Hapus</a>
+  			</td>
+  		</tr>
+  		@endforeach
+  	</table>
 
                   <a href="#tm-section-2" class="btn btn-danger">Explore...</a>
               </div>
