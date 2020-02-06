@@ -17,3 +17,10 @@ Route::get('/', function () {
 
 //route CRUD
 Route::get('/','PegawaiController@index');
+Route::get('/tambah','PegawaiController@tambah');
+Route::post('/store','PegawaiController@store');
+Route::get('/edit/{id}','PegawaiController@edit');
+Route::post('/update','PegawaiController@update');
+Route::get('/hapus/{id}','PegawaiController@hapus');
+Route::get('/tentang', 'PegawaiController@tentang');
+Route::get('/kontak', 'PegawaiController@kontak');

@@ -20,11 +20,16 @@
 
       <body>
         <div class="parallax-window" data-parallax="scroll" data-image-src="img/bg-img-01.jpg">
-          <h1><center>Quotes Juan</center></h1>
+
+          <h1><center>Data Pegawai</center></h1>
           <section class="container tm-page-1-content">
             <div class="row">
               <div class="col-md-6 ml-auto tm-text-white">
-                <header><h1>Daftar Tabel </h1></header>
+                <nav>
+                  <h3><a href="/tentang">TENTANG</h3></a>
+      			       <h3><a href="/kontak">KONTAK</h3></a>
+      		</nav>
+                <header><h2><a href="/tambah">Tambah Pegawai Baru</a> </h2></header>
                 <table border="1">
   		<tr>
   			<th>Nama</th>
@@ -40,9 +45,9 @@
   			<td>{{ $p->pegawai_umur }}</td>
   			<td>{{ $p->pegawai_alamat }}</td>
   			<td>
-  				<a href="/pegawai/edit/{{ $p->pegawai_id }}">Edit</a>
+  				<a href="/edit/{{ $p->pegawai_id }}">Edit</a>
   				|
-  				<a href="/pegawai/hapus/{{ $p->pegawai_id }}">Hapus</a>
+  				<a href="/hapus/{{ $p->pegawai_id }}">Hapus</a>
   			</td>
   		</tr>
   		@endforeach
@@ -55,9 +60,15 @@
           </section>
         </div>
 
+        <!-- bagian judul halaman blog -->
+          <h3> @yield('tentang-judul_halaman') </h3>
 
+
+          <!-- bagian konten blog -->
+          @yield('tentang-konten')
         <div id="tm-section-2" class="parallax-window" data-parallax="scroll" data-image-src="img/bg-img-02.jpg">
           <section class="container tm-page-1-content tm-page-2">
+
             <div class="row">
               <article class="col-md-6 tm-article tm-bg-white-transparent">
                 <header><h2 >Left Side</h2></header>
